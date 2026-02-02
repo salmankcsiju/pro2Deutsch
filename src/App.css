@@ -1,0 +1,62 @@
+:root {
+  --primary: #C8102E;
+  --secondary: #ffcc00 ; 
+  --SoftMedicalBlue : #E9F2F7;
+  --DarkGrey: #2E2E2E;
+  --dark: #2E2E2E;
+  --light: #f8f9fa;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+  background-color: var(--light);
+}
+.container {
+  width: 100%;
+  
+  margin: 0 auto;    
+  padding: 0 20px;   
+}
+
+section {
+  padding: 80px 0;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: #004494;
+  transform: translateY(-2px); 
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100%; 
+    padding: 15px 20px;
+  }
+}
+

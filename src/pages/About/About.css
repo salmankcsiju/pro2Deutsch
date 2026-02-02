@@ -1,0 +1,115 @@
+.about-page {
+  background-color: #fff;
+  color: #333;
+}
+
+.about-header {
+  background: linear-gradient(rgba(0, 68, 148, 0.8), rgba(0, 68, 148, 0.9)), url('../../img/about-bg.jpg') center/cover;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.about-header.active-anim { opacity: 1; }
+
+.about-header h1 { font-size: 3.5rem; margin-bottom: 10px; }
+.about-header .subtitle { font-size: 1.2rem; opacity: 0.9; }
+
+.about-description { padding: 80px 0; }
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.about-content.active-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-content h2 {
+  color: #004494;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.about-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.leadership-section {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #004494;
+  margin-bottom: 60px;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.leader-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.leader-card.active-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.leader-icon { font-size: 3rem; margin-bottom: 20px; }
+
+.leader-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.leader-card .role {
+  display: block;
+  color: #d40000;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.leader-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.leader-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 68, 148, 0.15);
+}
+
+@media (max-width: 768px) {
+  .about-header h1 { font-size: 2.5rem; }
+  .leadership-grid { grid-template-columns: 1fr; }
+}

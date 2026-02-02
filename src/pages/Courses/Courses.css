@@ -1,0 +1,108 @@
+.courses-page-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.animate-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.animate-card.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-header h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #ffffff; 
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.page-header p {
+    color: #e0e0e0;
+    margin-top: 10px;
+}
+
+.detailed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.detailed-card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    padding: 20px 10px;
+}
+
+.detailed-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card-top {
+    padding: 25px;
+    background: #f0f7ff;
+    border-bottom: 1px solid #e0eefb;
+}
+
+.level-tag {
+    background: #d40000;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-info h4 {
+    color: #0056b3;
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.outcome-section {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 4px solid #0056b3;
+    margin-top: 20px;
+}
+
+.specialized-section-wrapper {
+    margin-top: 80px;
+}
+
+.section-title {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.specialized-highlight {
+    border-top: 8px solid #d40000; 
+}
+
+@media (max-width: 768px) {
+    .detailed-grid {
+        grid-template-columns: 1fr;
+    }
+    .courses-page-container {
+        padding: 40px 15px;
+    }
+}
